@@ -3,7 +3,7 @@ import pandas as pd
 import json
 
 df = pd.read_csv(r"..\data\data_ibm.csv")
-
+#%%
 #========================#
 # ANALISE DAS COLUNAS #
 #========================#
@@ -11,7 +11,7 @@ df = pd.read_csv(r"..\data\data_ibm.csv")
 df.isnull().sum() #verifica se tem informações nulas
 df.info()
 df.head()
-
+#%%
 #=====================================================#
 # CRIAÇÃO DE COLUNAS PARA MELHOR ANALISE NO POWER BI #
 #=====================================================#
@@ -54,5 +54,10 @@ df.head()
 # ANALISE EXPLORATORIA #
 #============================
 #Taxa geral turnouver
-f"{df["Attrition_num"].mean() * 100:2f}%"
-f"{df.groupby("f")}"
+print(f"{df["Attrition_num"].mean() * 100:2f}%")
+
+#Turnouver por faixa-etaria
+print(df.groupby("Faixa-etaria")["Attrition_num"].mean())
+
+#Turnouver por tempo de empresa
+print(df.groupby("tempo_empresa")["Attrition_num"].mean())
