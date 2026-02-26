@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🚀 IBM HR Analytics | Projeto de Análise de Dados
 <div align="center">
 
@@ -98,21 +97,6 @@ Este projeto busca responder perguntas como:
 
 🔹 Tempo de empresa influencia na rotatividade?
 
-
-🛠️ Tecnologias Utilizadas:
-
-🐍 Python
-
-Pandas
-
-
-📊 Power BI
-
-📓 Jupyter Notebook
-
-📁 Git & GitHub
-
-
 🔄 Etapas do Projeto
 1️⃣ Importação e Tratamento de Dados (Python)
 
@@ -134,12 +118,10 @@ Nível salarial (qcut)
 
 Variáveis auxiliares para análise
 
->>>>>>> 0e91b0270634b94fb937a33755b0c077e1c2635b
 2️⃣ Análise Exploratória (EDA)
 
 Principais análises realizadas:
 
-<<<<<<< HEAD
 📌 Taxa geral de turnover <br>
 📌 Turnover por departamento <br>
 📌 Turnover por cargo <br>
@@ -183,13 +165,13 @@ Organização da base para BI
 Criação de métricas:
 
 Turnover %
->>>>>>> 0e91b0270634b94fb937a33755b0c077e1c2635b
+
 
 Média salarial
 
 Tempo médio na empresa
 
-<<<<<<< HEAD
+
 Organização da base para performance e clareza visual
 
 4️⃣ Dashboard Executivo
@@ -278,22 +260,11 @@ Aplicar ações preventivas nos primeiros anos de empresa
 
 📁 Estrutura do Projeto
 📦 projeto-ibm-hr-analytics
->>>>>>> 0e91b0270634b94fb937a33755b0c077e1c2635b
  ┣ 📂 data
  ┣ 📂 notebooks
  ┣ 📂 dashboard
  ┣ 📜 README.md
  ┗ 📜 requirements.txt
-<<<<<<< HEAD
-🔮 Próximos Passos
-
-🔍 Modelo preditivo de churn de colaboradores
-
-🤖 Machine Learning para previsão de desligamento
-
-📊 Clusterização de perfis
-
-🌐 Publicação do dashboard online
 
 👨🏻‍💻 Autores
 
