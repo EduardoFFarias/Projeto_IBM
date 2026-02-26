@@ -2,36 +2,27 @@
 import pandas as pd
 import json
 
-df = pd.read_csv(r"..\data\data_ibm.csv")
-#%%
-#========================#
-# ANALISE DAS COLUNAS #
-#========================#
+df = pd.read_csv(r"data\data_ibm.csv")
 
-df.isnull().sum() #verifica se tem informações nulas
+#%% ANALISE DAS COLUNAS
+df.isnull().sum()
 df.info()
 df.head()
-#%%
-#=====================================================#
-# CRIAÇÃO DE COLUNAS PARA MELHOR ANALISE NO POWER BI #
-#=====================================================#
 
-#Cria coluna de faixa etaria para melhor analise no power bi, alem de melhor entedimento para usuario
+#%% CRIAÇÃO DE COLUNAS
+
 df["Faixa-etaria"] = pd.cut(
     df["Age"],
     bins=[18,25,35,45,60],
     labels=["18-25", "26-35", "36-45", "46-60"]
 )
 
-#Cria coluna de divisao por faixa salarial
 df["nivel_salario"] = pd.qcut(
-            df["MonthlyIncome"],
-            q=3,
-            labels = ["Baixo", "Médio", "Alto"]
+    df["MonthlyIncome"],
+    q=3,
+    labels=["Baixo", "Médio", "Alto"]
 )
 
-
-#Cria coluna de divisao por tempo de empresa
 df["tempo_empresa"] = pd.cut(
     df["YearsAtCompany"],
     bins=[0,2,5,10,40],
@@ -39,25 +30,19 @@ df["tempo_empresa"] = pd.cut(
     include_lowest=True
 )
 
-df.head()
-
-#Cria coluna de demitidos de forma numerica (sim:1, nao:0), para melhor analise exploratoria
 df["Attrition_num"] = (
     df["Attrition"]
     .astype(str)
     .str.strip()
     .map({"Yes":1, "No":0})
 )
-df.head()
-#%%
-#============================
-# ANALISE EXPLORATORIA #
-#============================
-#Taxa geral turnouver
-print(f"{df["Attrition_num"].mean() * 100:2f}%")
 
-#Turnouver por faixa-etaria
+#%% ANALISE EXPLORATORIA
+
+print(f"{df['Attrition_num'].mean() * 100:.2f}%")
 print(df.groupby("Faixa-etaria")["Attrition_num"].mean())
-
-#Turnouver por tempo de empresa
 print(df.groupby("tempo_empresa")["Attrition_num"].mean())
+
+#%% EXPORTAÇÃO PARA POWER BI
+
+df.to_csv("data/data_ibm_tratado.csv", index=False)
