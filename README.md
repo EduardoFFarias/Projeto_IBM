@@ -2,6 +2,7 @@
 
 Dataset: IBM HR Analytics
 
+
 📌 Sobre o Projeto
 
 Este projeto tem como objetivo realizar uma análise completa de dados de Recursos Humanos utilizando o dataset IBM HR Analytics, passando por:
@@ -17,6 +18,7 @@ Este projeto tem como objetivo realizar uma análise completa de dados de Recurs
 🎯 Geração de insights para tomada de decisão
 
 A proposta do projeto é simular um cenário real de consultoria de dados para o setor de RH, com foco em redução de turnover, análise de perfil de colaboradores e apoio estratégico à gestão de pessoas.
+
 
 🏢 Contexto de Negócio
 
@@ -42,7 +44,8 @@ Este projeto busca responder perguntas como:
 
 🔹 Tempo de empresa influencia na rotatividade?
 
-🛠️ Tecnologias Utilizadas
+
+🛠️ Tecnologias Utilizadas:
 
 🐍 Python
 
@@ -54,6 +57,7 @@ Pandas
 📓 Jupyter Notebook
 
 📁 Git & GitHub
+
 
 🔄 Etapas do Projeto
 1️⃣ Importação e Tratamento de Dados (Python)
@@ -132,6 +136,7 @@ O dashboard foi construído com foco executivo, contendo:
 
 Objetivo: permitir que gestores identifiquem rapidamente áreas críticas e padrões de risco.
 
+
 📈 Principais Insights Encontrados
 
 (Exemplo – ajustar conforme seus resultados reais)
@@ -144,6 +149,7 @@ Cargos operacionais possuem maior rotatividade.
 
 Nível salarial mais baixo apresenta maior índice de desligamento.
 
+
 🎯 Impacto para o Negócio
 
 Com base na análise, a empresa poderia:
@@ -155,6 +161,7 @@ Rever política salarial para cargos críticos
 Desenvolver plano de carreira mais estruturado
 
 Aplicar ações preventivas nos primeiros anos de empresa
+
 
 📁 Estrutura do Projeto
 📦 projeto-ibm-hr-analytics
